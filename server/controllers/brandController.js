@@ -15,6 +15,8 @@ const getBrand = async (req, res) => {
 //get all brands
 const getBrands = async (req, res) => {
     const brands = await Brand.find({}).sort()
+
+    res.status(200).json(brands)
 }
 
 module.exports = {

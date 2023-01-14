@@ -6,6 +6,9 @@ const router = express.Router()
 
 router.get('/', getBrands)
 
+
+
+
 router.get('/:id', getBrand)
 
 router.post('/', async (req, res) => {
