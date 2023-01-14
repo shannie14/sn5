@@ -1,8 +1,6 @@
-const mongoose = require('mongoose')
+const mongoose = require('mongoose');
 
-const Schema = mongoose.Schema
-
-const brandSchema = new Schema({
+const BrandSchema = new mongoose.Schema({
     client: {
         type: String,
     },
@@ -10,36 +8,51 @@ const brandSchema = new Schema({
         type: String,
     },
     live: {
-        type: String,
+        type: Date,
     },
     imp_min: {
-        type: String,
+        type: Number,
     },
     view_min: {
-        type: String,
+        type: Number,
     },
     imp_total: {
-        type: String,
+        type: Number,
     },
     view_total: {
-        type: String,
+        type: Number,
     },
     imp_g: {
-        type: String,
+        type: Number,
     },
     view_g: {
-        type: String,
+        type: Number,
     },
     imp_meta: {
-        type: String,
+        type: Number,
     },
     view_meta: {
-        type: String,
+        type: Number,
     },
     signup: {
-        type: String,
+        type: Number,
     },
 
 })
 
-module.exports = mongoose.model('Brand', brandSchema)
+BrandSchema.index({
+    client: 'text',
+    campaign: 'text',
+    live: 'date',
+    imp_min: 'number',
+    view_min: 'number',
+    imp_total: 'number',
+    vuew_total: 'number',
+    imp_gview_: 'number',
+    imp_metaview_Meta: 'number',
+    signup: 'number',
+})
+
+const Brand = mongoose.model('Brand', BrandSchema, 'brands');
+
+module.exports = Brand;
