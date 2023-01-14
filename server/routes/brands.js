@@ -1,13 +1,10 @@
-const express = require('express');
+const express = require('express')
 const Brand = require("../models/brandModel")
 const { getBrand, getBrands } = require('../controllers/brandController')
 
 const router = express.Router()
 
 router.get('/', getBrands)
-
-
-
 
 router.get('/:id', getBrand)
 
@@ -21,5 +18,10 @@ router.post('/', async (req, res) => {
         res.status(400).json({ error: error.message })
     }
 })
+
+// app.use((req, res, next) => {
+//     console.log(req.path, req.method)
+//     next()
+// })
 
 module.exports = router
