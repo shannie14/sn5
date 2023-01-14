@@ -5,6 +5,7 @@ import Home from '../src/pages/Home'
 import Sidebar from '../src/components/Sidebar'
 
 function App() {
+
   return (
     <div className="App">
       <BrowserRouter>
