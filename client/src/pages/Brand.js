@@ -1,5 +1,4 @@
-// import Brandtable from "../components/Brandtable"
-import Brandlist from "../components/Brandlist"
+// import Brandlist from "../components/Brandlist"
 import Campaigns from "../components/Campaigns"
 
 const Home = () => {
@@ -7,7 +6,7 @@ const Home = () => {
     return (
         <div className="home">
             <h2>SN HOME</h2>
-            {/* <Campaigns /> */}
+            <Campaigns />
 
         </div>
     )
